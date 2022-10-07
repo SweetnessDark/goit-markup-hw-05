@@ -262,16 +262,8 @@ body {
     justify-content: space-between;
 }
 
-.pictures span {
-    position: absolute;
-    top: 67%;
-    margin-left: 113px;
-    z-index: 11;
-
-
-}
-
 .pictures li {
+    position: relative;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -280,11 +272,17 @@ body {
     color: var(--color-white);
 }
 
+.pictures img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .picture-item1::after,
 .picture-item2::after,
 .picture-item3::after {
-    position: relative;
-    bottom: 74px;
+    position: absolute;
+    bottom: 0;
     display: block;
     width: 100%;
     height: 70px;
@@ -370,13 +368,13 @@ body {
     background-color: var(--color-blue);
 }
 
-.link-icon svg {
+.link-icon a svg {
     fill: var(--color-gray2);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-icon svg:hover,
-.link-icon svg:focus {
+.link-icon a:hover svg,
+.link-icon a:focus svg {
     fill: var(--color-white);
 }
 
@@ -411,8 +409,8 @@ body {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-list svg:hover,
-.client-list svg:focus {
+.client-list a:hover svg,
+.client-list a:focus svg {
     fill: var(--color-blue);
 }
 
